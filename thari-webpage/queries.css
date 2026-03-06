@@ -1,0 +1,163 @@
+/* LG - SMALL LAPTOPS: 1024px - 1280px */
+
+@media (max-width: 78.5rem) {
+    /* 1256px / 16px = 78.5rem */
+    /* 78.5rem x 16px = 1256px */
+
+    html {
+        font-size: 56.25%;
+        /* 9px / 16px = 56.25% */
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .small-nav-bar {
+        display: flex;
+        align-items: center;
+        width: fit-content; 
+        min-width: 110px;
+        justify-content: flex-end;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-heading-break {
+        display: none;
+    }
+
+    .hero-paragraph {
+        text-align: center;
+    }
+
+    .Startseite-img-container {
+        display: none;
+    }
+
+    .features-grid-container {
+        column-gap: 5rem;
+    }
+
+    .cta-section {
+        margin-bottom: 20rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-login-register-container {
+        justify-content: none;
+    }
+
+    .nav-btn-container {
+        visibility: hidden;
+    }
+}
+
+/* MD - TABLES: 768px - 1024px */
+
+@media (max-width: 48rem) {
+    /* 815px / 16px = 51rem */
+    /* 51rem x 16px = 816px */
+
+    html {
+        font-size: 50%;
+        /* 8px / 16px = 50% */
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .features-grid-container {
+        column-gap: 1rem;
+    }
+        
+    .feature-item {
+        gap: 1rem;
+    }
+
+    .cta-section {
+        margin-bottom: 15rem;
+    }
+}
+
+/* SM - PHONE LANDSCAPE: 576px - 768px */
+
+@media (max-width: 43rem) {
+    /* 680px / 16px = 43rem */
+    /* 43rem x 16px = 688px */
+
+    html {
+        font-size: 43.75%;
+        /* 7px / 16px = 43.75% */
+    }
+
+    .hero-section {
+        width: 100%;
+        height: 0;
+    }
+
+    .feature-item {
+        gap: 1rem;
+    }
+
+    .features-grid-container {
+        row-gap: 5rem;
+    }
+
+    .feature-item {
+        gap: 1rem;
+    }
+
+    .feature-img {
+        display: none;
+    }
+
+    .cta-card {
+        padding: 8rem 16rem;
+    }
+}
+
+/* XS - PHONE PORTRAINT: < 576px */
+
+@media (max-width: 33.25rem) {
+    /* 530px / 16px = 33.25rem */
+    /* 34rem x 16px = 544px */
+
+    html {
+        font-size: 37.5%;
+        /* 6px / 16px = 37.5% */
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .hero-section {
+        width: 100%;
+        height: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: 100%;
+    }
+
+    .feature-item {
+        gap: 1rem;
+    }
+
+    .feature-img {
+        display: none;
+    }
+
+
+    .cta-card {
+        padding: 4rem 8rem;
+    }
+}

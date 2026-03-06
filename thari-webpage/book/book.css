@@ -1,0 +1,111 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #f5f5f5;
+}
+
+/* Buch- und Formularbereich */
+.book-container {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Linkes Formular */
+.book-form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.book-form input, 
+.book-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Buch rechts */
+.book-preview {
+  width: 60%;
+  display: flex;
+  gap: 1rem;
+}
+
+.page {
+  flex: 1;
+  min-height: 400px;
+  padding: 2rem;
+  background-color: #fff9e6;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  overflow-y: auto;
+}
+
+/* Kalender oben */
+.calendar-container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-header h2 {
+    margin: 0;
+}
+
+.calendar-header button {
+    font-size: 1.5rem;
+    background-color: #339af0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+}
+
+.calendar-day {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    min-height: 120px;
+    padding: 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-day header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.calendar-day textarea {
+    flex: 1;
+    width: 100%;
+    border: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background-color: transparent;
+}

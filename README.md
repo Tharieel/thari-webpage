@@ -1,5 +1,5 @@
 # Project 
-thari-webpage (www.thari-klostermann.com)
+thari-webpage
 
 ## Description
 A personal website for Thari - developed using HTML, CSS, and JavaScript. Contains information, images, and contact details.

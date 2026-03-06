@@ -117,10 +117,10 @@ body {
 }
 
 .container {
-    max-width: 95%;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 0rem;
     box-sizing: border-box;
 }
 
@@ -301,22 +301,87 @@ ul {
 
 /* ------ NAVBAR ------ */
 
-.navbar {
-    height: var(--nav-height);
+/* Header: Hintergrund streckt sich über ganze Breite */
+.site-header {
+    width: 100%;
+    background-color: transparent; /* optional: Header selbst durchsichtig */
+    padding: 0px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Innerer Container: Abstand links/rechts */
+.header-inner {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+/* Sanfter Hintergrund für die Box */
+.header-bg {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #000000;
-    padding: 0 1rem;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: rgba(240, 240, 240, 0.95); /* sanfter Hintergrund */
+    padding: 0px 160px;
+    border-radius: 0px; /* optional: abgerundete Ecken */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.logo {
+/* Logo */
+.logo-container a {
+    font-size: 3rem;
     font-weight: 700;
+    text-decoration: none;
+    color: #000;
 }
 
-.nav-btn-container {
+/* NAVIGATION direkt rechts vom Logo, nimmt nur den nötigen Platz */
+.navbar {
     display: flex;
-    margin-left: auto;
-    margin-right: 2rem;
+    margin-left: 1px; /* kleiner Abstand Logo ↔ Nav */
+    flex-grow: 1;       /* Nav dehnt sich aus, aber lässt rechte Elemente frei */
+}
+
+.navbar .nav-btn-container {
+    display: flex;
+    gap: 1px;           /* Abstand zwischen Buttons */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* Rechte Elemente: immer rechts außen */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Login/Register */
+.nav-login-register-container {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Icons */
+.nav-language-lightdark-container {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-icons {
+    width: 24px;
+    height: 24px;
 }
 
 .nav-line {
@@ -338,36 +403,6 @@ ul {
     border-color: var(--grey-dark);
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 110px;
-    right: 370px;
-    background-color: white;
-    min-width: 100px;
-    border-radius: 0.3rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-content li {
-    list-style: none;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 0.7rem 1rem;
-}
-
-.dropdown-content a:hover {
-    background-color: #f0f0f0;
-}
-
-.dropdown:hover .dropdown-content {
-    display: flex;
-}
-
 .nav-login-register-container {
     display: flex;
     gap: 1rem;
@@ -386,125 +421,135 @@ ul {
 
 /* ------ HERO SECTION ------ */
 
+/* HERO SECTION BOX */
 .hero-section {
-    height: calc(100vh - var(--nav-height));
-    min-height: 400px;
-    margin-bottom: 10rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: left;
-    gap: clamp(1rem, 6vw, 8rem);
-    border-bottom: 1px solid #000000;
-    position: relative;
+    margin-top: 50px;
+    margin-bottom: 2rem;
 }
 
+/* Box mit Hintergrund */
+.hero-bg {
+    position: relative; /* für Raindrops */
+    display: flex;
+    flex-direction: row; /* Text links, Bild rechts */
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(20rem, 20vw, 100rem);
+
+    max-width: 1350px; /* zentriert */
+    margin: 0 auto; 
+    padding: 160px 100px;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Textblock */
 .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 600px;
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    position: relative;
+    z-index: 1; /* über Raindrops */
 }
 
+/* Heading */
 .hero-heading {
     margin-bottom: 1rem;
-    text-align: left;
     font-weight: bold;
     line-height: 1.2;
     transition: transform 0.8s ease;
 }
-
 .hero-heading:hover {
     transform: scale(1.1);
 }
 
-.art-color {
-    color: rgb(100, 8, 229);
-}
-
-.rebel-color {
-    color: orange;
-}
-
+/* Paragraph */
 .hero-paragraph {
-    display: flex;
     margin-bottom: clamp(1rem, 3vw, 4rem);
-    text-align: left;
 }
 
+/* Buttons */
 .hero-btn-container {
     display: flex;
     gap: 1rem;
     list-style: none;
-    align-items: center;
     padding: 0;
     margin: 1rem 0;
+    align-items: center;
 }
 
+/* Bildblock */
 .Startseite-img-container {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2; /* über Raindrops */
 }
 
+/* Bild */
 .Startseite-img {
-    max-width: 50rem;
+    max-width: 100%;
+    max-height: 500px;
     height: auto;
     object-fit: contain;
-    display: flex;
-    gap: 2rem;
-    transition: transform 0.8s ease;
-    transform-origin: center;
     border: 2px solid black;
+    border-radius: 10px;
+    transition: transform 0.8s ease;
 }
-
 .Startseite-img:hover {
     transform: scale(1.0) scaleX(-1);
 }
 
+/* RAINDROPS */
 .raindrop-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100%);
+    height: 100%; /* nur innerhalb der Box */
     pointer-events: none;
     overflow: hidden;
-    z-index: 1;
+    z-index: 1; /* unter Text/Bild */
 }
 
 .raindrop {
     position: absolute;
-    top: 0px;
+    top: 0;
     width: 6px;
     height: 10px;
     background: var(--black);
     border-radius: 50%;
-    animation: drop 10s infinite;
     opacity: 0.8;
+    animation: drop 5s linear infinite;
 }
 
-/* Positioniere die Tropfen zufällig */
+/* Zufällige horizontale Position */
 .raindrop:nth-child(1) { left: 10%; animation-delay: 0s; }
-.raindrop:nth-child(2) { left: 55%; animation-delay: 5s; }
-.raindrop:nth-child(3) { left: 90%; animation-delay: 3s; }
+.raindrop:nth-child(2) { left: 25%; animation-delay: 1s; }
+.raindrop:nth-child(3) { left: 50%; animation-delay: 2s; }
+.raindrop:nth-child(4) { left: 70%; animation-delay: 0.5s; }
+.raindrop:nth-child(5) { left: 85%; animation-delay: 3s; }
 
+/* Drop Animation nur innerhalb Box */
 @keyframes drop {
-    0% {
-        transform: translateY(0) scaleX(1);
-        opacity: 0;
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { transform: translateY(100%); opacity: 1; }
+    100% { transform: translateY(100%); opacity: 0; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero-bg {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
     }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        transform: translateY(100vh) scaleX(0.7);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(110vh) scaleX(0.5);
-        opacity: 0;
-    }
+    .hero-content { text-align: center; max-width: 100%; }
+    .Startseite-img-container { max-width: 100%; }
 }
 
 /* ------ FEATURES SECTION ------ */

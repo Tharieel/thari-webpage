@@ -7,60 +7,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="de.css">
-    <title>THARI | </title>
+    <title>☆ THARI - Homepage</title>
 </head>
 <body>
     <div class="container">
-        <header>
-            <!-- NAVIGATION -->
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="de.html" id="Logo-Startseite-Link">TH<span class="art-color">A</span><span class="rebel-color">R</span>I | </a> 
-                    <!-- Senkrechter Strich professioneller -->
-                </div>
-                
-                <ul class="nav-btn-container">
-                    <p class="nav-line"><img class="nav-icons" src="images/svg/arrow-back-outline.svg" alt="arrow-back"></p>
-                    <li><a class="nav-btn" href="nav-pages/about-me.html">Über mich</a></li>
-                    <li><a class="nav-btn" href="nav-pages/contact.html">Kontakt</a></li>
-                    <li><a class="nav-btn" href="nav-pages/services.html">Leistungen</a></li>
-                    <li><a class="nav-btn" href="nav-pages/portfolio.html">Portfolio</a></li>
-                    <li><a class="nav-btn" href="nav-pages/blog.html">Blog</a></li>
-                    <li><a class="nav-btn" href="nav-pages/feedback.html">Bemerkungen</a></li>
-                    <p class="nav-line"><img class="nav-icons" src="images/svg/arrow-forward-outline.svg" alt="arrow-back"></p>
-                    <li class="dropdown">
-                        <a class="nav-btn" href="#"><img class="nav-icons" src="images/svg/arrow-down-outline.svg" alt="arrow-down"></a>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Über mich</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="#">Leistungen</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Bemerkungen</a></li>
+
+        <!-- HEADER: Logo links, Navigation rechts -->
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="header-bg">
+                    <!-- LOGO -->
+                    <div class="logo-container">
+                        <a href="de.html">☆ THARI</a>
+                    </div>
+
+                    <!-- NAVIGATION -->
+                    <nav class="navbar">
+                        <ul class="nav-btn-container">
+                            <li><a class="nav-btn" href="nav-pages/about-me.html">Über mich</a></li>
+                            <li><a class="nav-btn" href="nav-pages/contact.html">Kontakt</a></li>
+                            <li><a class="nav-btn" href="nav-pages/services.html">Leistungen</a></li>
+                            <li><a class="nav-btn" href="nav-pages/portfolio.html">Portfolio</a></li>
+                            <li><a class="nav-btn" href="nav-pages/blog.html">Blog</a></li>
+                            <li><a class="nav-btn" href="nav-pages/feedback.html">Bemerkungen</a></li>
                         </ul>
-                    </li>
-                </ul>
+                    </nav>
 
-                <ul class="nav-login-register-container">
-                    <li><a class="btn btn-primary-outline" href="login-register/login.html" id="login-link">Anmelden</a></li>
-                    <li><a class="btn btn-primary" href="login-register/register.html" id="register-link">Registrieren</a></li>
-                </ul>
+                    <!-- RECHTE ELEMENTE: Login/Register + Icons -->
+                    <div class="header-right">
+                        <ul class="nav-login-register-container">
+                            <li><a class="btn btn-primary" href="login-register/register.html">Anmelden</a></li>
+                        </ul>
 
-                <ul class="nav-language-lightdark-container">
-                    <li class="tooltip"><img class="nav-icons" src="images/svg/globe-outline.svg" alt="World Logo"><span class="tooltip-text">de | en Übersetzung folgt</span></li>
-                    <li class="tooltip"><img class="nav-icons" src="images/svg/contrast-outline.svg" alt="Darklight Logo"><span class="tooltip-text">light | dark Modus folgt</span></li>
-                </ul>
-            </nav>
+                        <ul class="nav-language-lightdark-container">
+                            <li class="tooltip"><img class="nav-icons" src="images/svg/globe-outline.svg" alt="World Logo"><span class="tooltip-text">de | en Übersetzung folgt</span></li>
+                            <li class="tooltip"><img class="nav-icons" src="images/svg/contrast-outline.svg" alt="Darklight Logo"><span class="tooltip-text">light | dark Modus folgt</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-            <!-- HERO SECTION -->
-            <section class="hero-section">
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-bg">
                 <div class="hero-content">
-                    <h1 class="hero-heading">
-                        | TECH | HELP | <span class="art-color">ART</span> | <br> 
-                        | <span class="rebel-color">REBEL</span> | INTEGRITY | 
-                    </h1>
-                    <p class="hero-paragraph">Subheading that sets up context, shares more info about the website, or generally gets people psyched to keep scrolling</p>
-                
+                    <h1 class="hero-heading">THARI</h1>
+                    <p class="hero-paragraph">
+                        Hi, mein Name ist Thariel ☆
+                    </p>
+                    
                     <ul class="hero-btn-container">
                         <li><a class="btn btn-primary" href="nav-pages/contact.html">Kontakt</a></li>
                         <li><a class="btn btn-primary-outline" href="button-pages/learn-more.html">Learn more</a></li>
@@ -71,14 +67,16 @@
                     <img class="Startseite-img" src="images/home/giorgio-trovato-opnHVHNZuUU-unsplash.jpg" alt="Woman">
                 </div>
 
+                <!-- Raindrops in der Box -->
                 <div class="raindrop-container">
                     <span class="raindrop"></span>
                     <span class="raindrop"></span>
                     <span class="raindrop"></span>
+                    <span class="raindrop"></span>
+                    <span class="raindrop"></span>
                 </div>
-
-            </section>
-        </header>
+            </div>
+        </section>
         
         <main>
             <!-- FEATURE SECTION -->

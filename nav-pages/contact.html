@@ -8,42 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../de.css">
     <link rel="stylesheet" href="contact.css">
-    <title>THARI | Kontakt</title>
+    <title>THARI - Kontakt</title>
 </head>
 <body>
     <div class="container">
-        <header>
-            <!-- NAVIGATION -->
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="../de.html" id="Logo-Startseite-Link">TH<span class="art-color">A</span><span class="rebel-color">R</span>I | </a> 
-                    <!-- Senkrechter Strich professioneller -->
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="header-bg">
+                    <div class="logo-container">
+                        <a href="../de.html">☆ THARI</a>
+                    </div>
+                    <nav class="navbar">
+                        <ul class="nav-btn-container">
+                            <li><a class="nav-btn" href="../nav-pages/contact.html">Kontakt</a></li>
+                            <li><a class="nav-btn" href="../nav-pages/services.html">Projekte</a></li>
+                            <li><a class="nav-btn" href="../nav-pages/blog.html">Blog</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-right">
+                        <ul class="nav-login-register-container">
+                            <li><a class="btn btn-primary" href="../login-register/register.html">Anmelden</a></li>
+                        </ul>
+                        <ul class="nav-language-lightdark-container">
+                            <li class="tooltip"><img class="nav-icons" src="../images/svg/globe-outline.svg" alt="World Logo"><span class="tooltip-text">de | en Übersetzung folgt</span></li>
+                            <li class="tooltip"><img class="nav-icons" src="../images/svg/contrast-outline.svg" alt="Darklight Logo"><span class="tooltip-text">light | dark Modus folgt</span></li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <ul class="nav-btn-container">
-                    <p class="nav-line">|</p>
-                    <li><a class="nav-btn" href="about-me.html">Über mich</a></li>
-                    <li><a class="active nav-btn" href="contact.html">Kontakt</a></li>
-                    <li><a class="nav-btn" href="services.html">Leistungen</a></li>
-                    <li><a class="nav-btn" href="portfolio.html">Portfolio</a></li>
-                    <li><a class="nav-btn" href="blog.html">Blog</a></li>
-                    <li><a class="nav-btn" href="feedback.html">Bemerkungen</a></li>
-                    <p class="nav-line">|</p>
-                </ul>
-
-                <ul class="nav-login-register-container">
-                    <li><a class="btn btn-primary-outline" href="../login-register/login.html" id="login-link">Anmelden</a></li>
-                    <li><a class="btn btn-primary" href="../login-register/register.html" id="register-link">Registrieren</a></li>
-                </ul>
-
-                <ul class="nav-language-lightdark-container">
-                    <li class="tooltip"><a href="index.html"><img class="nav-icons" src="../images/svg/globe-outline.svg" alt="World Logo"><span class="tooltip-text">de | en Übersetzung folgt</span></a></li>
-                    <li class="tooltip"><a href="index.html"><img class="nav-icons" src="../images/svg/contrast-outline.svg" alt="Darklight Logo"><span class="tooltip-text">light | dark Modus folgt</span></a></li>
-                </ul>
-            </nav>
+            </div>
+        </header>
 
         <!-- CONTACT FORM -->
-            <main class="login-wrapper">
+        <main class="login-wrapper">
+            <div class="login-form-container">
                 <form action="action_page.php" method="post" class="login-form">
                     <h4 class="login-header">Kontakt</h4>
 
@@ -54,27 +51,29 @@
                     <input type="text" placeholder="E-Mail-Adresse einfügen" name="email" required>
 
                     <label for="message"><b class="small-text">Nachricht</b></label>
-                    <textarea id="message entry" name="entry" cols="30" rows="5" minlength="10" placeholder="Ihre Nachricht" required></textarea>
+                    <textarea id="message-entry" name="entry" cols="30" rows="10" minlength="10" placeholder="Ihre Nachricht" required></textarea>
 
-                    <label class="small-text"><input type="checkbox" name="remember" required> Ich bin mit der Verarbeitung meiner Eingaben zum Zwecke der Anfragebearbeitung einverstanden.</label>
+                    <label class="small-text">
+                        <input type="checkbox" name="remember" required>
+                        <span>Ich bin mit der Verarbeitung meiner Eingaben zum Zwecke der Anfragebearbeitung einverstanden</span>
+                    </label>
 
                     <ul class="login-register-form-buttons">
                         <li><button type="submit" class="btn btn-primary">Absenden</button></li>
                         <li><button type="reset" class="btn btn-primary">Zurücksetzen</button></li>
                         <hr class="short-line">
-                        <li><a class="btn btn-primary" href="../de.html" id="register-link">Abbrechen</a></li>
+                        <li><a class="btn btn-primary" href="../de.html">Abbrechen</a></li>
                     </ul>
-                        
                 </form>
-            </main>
+            </div>
+        </main>
 
         <!-- FOOTER -->
         <footer class="footer">
+            <div class="footer-inner">
             <div class="footer-thari">
-                <a href="index.html">THARI</a>
-                <p class="small-text">| Tech | Help | Art | Rebel | Integrity |</p>
+                <a href="../de.html">☆ THARI | Portfolio</a>
             </div>
-
             <div class="footer-row">
                 <ul class="social-icons-container">
                     <li><a href="https://www.instagram.com/"><img class="social-icons" src="../images/svg/logo-instagram.svg" alt="Instagram"></a></li>
@@ -82,16 +81,15 @@
                     <li><a href="https://www.youtube.com/"><img class="social-icons" src="../images/svg/logo-youtube.svg" alt="YouTube"></a></li>
                     <li><a href="https://www.github.com/"><img class="social-icons" src="../images/svg/logo-github.svg" alt="GitHub"></a></li>
                 </ul>
+
                 <ul class="footer-rechts-nav-container">
-                    <li><a href="impressum.html">Impressum</a></li>
-                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                    <li><a href="../footer-pages/impressum.html">Impressum</a></li>
+                    <li><a href="../footer-pages/datenschutz.html">Datenschutz</a></li>
                 </ul>
             </div>
-            
             <div class="small-text-footer">
                 <p class="small-text">Made with <span class="heart-icon">♥︎</span> in Düsseldorf</p>
             </div>
-            
         </footer>
     </div>
 </body>

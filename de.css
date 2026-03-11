@@ -104,16 +104,26 @@ Black: #000000 (Black)
     padding: 0;
 }
 
-html {
+/* html {
    font-size: 62.5%; 
    /* 10px / 16px = 62.5% */
-}
+/* } */
 
-body {
+html, body {
     font-family: var(--font-family);
     font-weight: var(--font-weight-normal);
     line-height: var(--line-height-normal);
     color: var(--grey-base);
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1;
 }
 
 .container {
@@ -122,6 +132,9 @@ body {
     margin: 0 auto;
     padding: 0 0rem;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5 {
@@ -169,6 +182,25 @@ a:hover {
 
 a:link, a:visited, a:hover, a:active {
     color: var(--grey-base);
+}
+
+button {
+    text-decoration: none;
+    font-size: var(--text-base);
+    display: inline-block;
+    transition: transform 0.8s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    font-weight: 700;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button:link, button:visited, button:hover, button:active {
+    color: var(--grey-base);
+    cursor: pointer;
 }
 
 ul {
@@ -259,10 +291,6 @@ ul {
     width: 100px;
 }
 
-.logo-sm {
-    width: 80px;
-}
-
 .chat-container {
     height: 7rem;
     width: 7rem;
@@ -333,8 +361,7 @@ ul {
 
 /* Logo */
 .logo-container a {
-    font-size: 3rem;
-    /* font-weight: 700; */
+    font-size: 26px;
     text-decoration: none;
     color: #000;
 }

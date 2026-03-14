@@ -40,6 +40,16 @@
 
         <!-- HERO SECTION -->
         <section class="hero-section">
+            <!-- Spline Hintergrund -->
+            <div class="spline-bg-1">
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
+                <spline-viewer hint loading-anim-type="spinner-small-light" url="https://prod.spline.design/vFS0C6JXzNLnN3Mu/scene.splinecode"></spline-viewer>
+            </div>
+            <div class="spline-bg-2">
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
+                <spline-viewer hint loading-anim-type="spinner-small-light" url="https://prod.spline.design/vFS0C6JXzNLnN3Mu/scene.splinecode"></spline-viewer>
+            </div>
+
             <div class="hero-bg">
                 <div class="hero-waves">
                 <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -49,8 +59,14 @@
                 <div class="hero-content">
                     <h1 class="hero-heading">☆ THARI | Portfolio</h1>
                     <p class="hero-paragraph">
-                        Hi, mein Name ist Thariel.
-                        Unlock the simplicity of online journaling - say goodbye to the hassle of pen and paper and hello to effortless journaling with just a few clicks.
+                        Name: Katharina K.<br>
+                        Künstlername: Thariel<br>
+                        <br>
+                        Mit meinem Projekt THARI vereine ich TECH, ART und REBEL – Technik, kreative Gestaltung und unkonventionelle Ideen – zu interaktiven digitalen Erlebnissen.<br>
+                        <br>
+                        Ich entwickle moderne Websites, gestalte visuelle Konzepte und setze innovative Ideen in die Realität um.<br>
+                        <br>
+                        Jedes Projekt ist für mich eine Chance, Grenzen zu verschieben, neue Wege auszuprobieren und dabei Ästhetik und Funktionalität zu verbinden.
                     </p>
                     
                     <ul class="hero-btn-container">
@@ -60,40 +76,84 @@
                     </ul>
                 </div>
                 <div class="Startseite-img-container">
-                    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.68/build/spline-viewer.js"></script>
-                    <spline-viewer hint loading-anim-type="spinner-small-light" url="https://prod.spline.design/vFS0C6JXzNLnN3Mu/scene.splinecode"></spline-viewer>
-            </div>
+                    <img class="Startseite-img" src="images/home/me.jpg" alt="Bild von mir." width="400">
         </section>
         
         <main>
             <!-- FEATURE SECTION -->
             <section class="features-section">
                 <div class="features-grid-container">
+
                     <div class="feature-text">
                         <h4>TECH | </h4>
-                        <h5 class="feature-heading">Webentwicklung</h5>
-                        <p><b> > HTML/CSS</b></p>
-                        <p>HTML (HyperText Markup Language) ist eine Auszeichnungssprache, die die Struktur und Inhalte von Webseiten definiert und mit speziellen Tags arbeitet, um Texte, Bilder und Tabellen zu strukturieren und darzustellen.</p>
-                        <p>CSS (Cascading Style Sheets) ist eine Stylesheet-Sprache, die verwendet wird, um das Aussehen und Layout von HTML- und XML-Dokumenten zu definieren, indem sie Anweisungen für die Darstellung von Elementen auf verschiedenen Medien gibt.</p>
-                        <p><b> > JavaScript</b></p>
-                        <p>JavaScript ist eine vielseitige Programmiersprache, die hauptsächlich zur Erstellung interaktiver und dynamischer Webseiten verwendet wird, sowohl auf der Client- als auch auf der Serverseite.</p>
-                        <p><b> > Python</b></p>
-                        <p>Python ist eine universelle, plattformübergreifende Open-Source-Programmiersprache, die für ihre einfache Syntax, Vielseitigkeit und breite Anwendbarkeit bekannt ist.</p>
+                        <h5 class="feature-heading">Webentwicklung & Data Science</h5>
+                        <div class="skills-container">
+                            <div class="skill-box-Tech">
+                                <p class="skill-title"> > HTML / CSS</p>
+                                <p class="skill-desc">
+                                    <b>HTML (HyperText Markup Language)</b> ist eine Auszeichnungssprache, die die Struktur und Inhalte von Webseiten definiert und mit speziellen Tags arbeitet, um Texte, Bilder und Tabellen zu strukturieren und darzustellen.
+                                </p>
+                                <p class="skill-desc">
+                                    <b>CSS (Cascading Style Sheets)</b> ist eine Stylesheet-Sprache, die verwendet wird, um das Aussehen und Layout von HTML- und XML-Dokumenten zu definieren, indem sie Anweisungen für die Darstellung von Elementen auf verschiedenen Medien gibt.
+                                </p>
+                            </div>
+                            <div class="skill-box-Tech">
+                                <p class="skill-title"> > JavaScript</p>
+                                <p class="skill-desc">
+                                    JavaScript ist eine vielseitige Programmiersprache, die hauptsächlich zur Erstellung interaktiver und dynamischer Webseiten verwendet wird, sowohl auf der Client- als auch auf der Serverseite.
+                                </p>
+                            </div>
+                            <div class="skill-box-Tech">
+                                <p class="skill-title"> > Python</p>
+                                <p class="skill-desc">
+                                    Python ist eine universelle, plattformübergreifende Open-Source-Programmiersprache, die für ihre einfache Syntax, Vielseitigkeit und breite Anwendbarkeit bekannt ist.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                        <div class="feature-text">
+
+                    <div class="feature-text">
                         <h4>ART | </h4>
-                        <h5 class="feature-heading">Design</h5>
-                        <p>||| Spline</p>
-                        <p>Spline ist eine kostenlose, browserbasierte 3D-Design-Software, die Echtzeit-Kollaboration und einfache Erstellung interaktiver Web-Erlebnisse ermöglicht, ohne Installation oder Vorerfahrung. </p>
-                        <p>||| Blender</p>
-                        <p>Blender ist eine freie, mit der GPL lizenzierte 3D-Grafiksoftware, mit der sich modellieren, texturieren und animieren lässt.</p>
+                        <h5 class="feature-heading">Design & Kreativität</h5>
+                        <div class="skills-container">
+                            <div class="skill-box-Art">
+                                <p class="skill-title"> ||| Spline</p>
+                                <p class="skill-desc">
+                                    Spline ist eine kostenlose, browserbasierte 3D-Design-Software, die Echtzeit-Kollaboration und einfache Erstellung interaktiver Web-Erlebnisse ermöglicht, ohne Installation oder Vorerfahrung.
+                                </p>
+                            </div>
+                            <div class="skill-box-Art">
+                                <p class="skill-title"> ||| Blender</p>
+                                <p class="skill-desc">
+                                    Blender ist eine freie, mit der GPL lizenzierte 3D-Grafiksoftware, mit der sich modellieren, texturieren und animieren lässt.
+                                </p>
+                            </div>
+                            <div class="skill-box-Art">
+                            </div>
+                        </div>
                     </div>
+
                     <div class="feature-text">
                         <h4>REBEL | </h4>
-                        <h5 class="feature-heading">Vielfältigkeit</h5>
-                        <p> # YouTube</p>
-                        <p> # Schreiben</p>
+                        <h5 class="feature-heading">Vielfältigkeit & Innovation</h5>
+                        <div class="skills-container">
+                            <div class="skill-box-Rebel">
+                                <p class="skill-title">YouTube</p>
+                                <p class="skill-desc">
+                                    Baustelle.
+                                </p>
+                            </div>
+                            <div class="skill-box-Rebel">
+                                <p class="skill-title">Buch</p>
+                                <p class="skill-desc">
+                                    Baustelle.
+                                </p>
+                            </div>
+                            <div class="skill-box-Rebel">
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </section>
         </main>

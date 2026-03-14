@@ -57,7 +57,7 @@ Black: #000000 (Black)
     /* FONT SIZE */
     --text-sm: 1.2rem;
     --text-base: 1.4rem;
-    --text-paragraph: 2rem;
+    --text-paragraph: 1.7rem;
     --text-h5: 2.4rem;
     --text-h4: 3.2rem;
     --text-h3: 4rem;
@@ -103,11 +103,6 @@ Black: #000000 (Black)
     margin: 0;
     padding: 0;
 }
-
-/* html {
-   font-size: 62.5%; 
-   /* 10px / 16px = 62.5% */
-/* } */
 
 html, body {
     font-family: var(--font-family);
@@ -478,7 +473,7 @@ ul {
     max-width: 1350px;
     margin: 0 auto;
     padding: 0 90px;          /* nur horizontales Padding */
-    height: 600px;            /* feste Höhe der Box */
+    height: 730px;            /* feste Höhe der Box */
     background-color: #6f93c957;
     border: 2px solid #000;
     border-radius: 12px;
@@ -490,8 +485,8 @@ ul {
 /* Textblock */
 .hero-content {
     position: absolute;     /* unabhängig von Box-Flex */
-    top: 80px;              /* Abstand vom oberen Rand der Box */
-    left: 90px;             /* Abstand vom linken Rand */
+    top: 30px;              /* Abstand vom oberen Rand der Box */
+    left: 120px;             /* Abstand vom linken Rand */
     max-width: 600px;
     text-align: left;
     z-index: 2;
@@ -517,7 +512,39 @@ ul {
     align-items: center;
 }
 
-/* Bildblock */
+spline-viewer {
+    transform: translate(350px, 20px);
+    z-index: 2;
+}
+
+.spline-bg-1 {
+    position: absolute;   /* hinter den Content */
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;           /* alles andere überlagert */
+    pointer-events: none; /* Spline klickbar deaktivieren, damit Buttons funktionieren */
+    opacity: 0.10;        /* optional, damit Content besser lesbar ist */
+}
+
+.spline-bg-2 {
+    position: absolute;   /* hinter den Content */
+    top: 1300px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;           /* alles andere überlagert */
+    pointer-events: none; /* Spline klickbar deaktivieren, damit Buttons funktionieren */
+    opacity: 0.15;        /* optional, damit Content besser lesbar ist */
+}
+
+/* Hero/Feature Content über Spline */
+.hero-bg, .features-grid-container {
+    position: relative;
+    z-index: 1;
+}
+
 .Startseite-img-container {
     flex: 1;
     display: flex;
@@ -526,24 +553,16 @@ ul {
     position: relative;
 }
 
-spline-viewer{
-    transform: translate(350px, 20px);
-    z-index: 2;
-}
-
-/* Bild */
 .Startseite-img {
-    max-width: 100%;
-    max-height: 500px;
+    max-width: 400px;
     height: auto;
     object-fit: contain;
     border: 2px solid black;
     border-radius: 10px;
-    transition: transform 0.8s ease;
-}
-
-.Startseite-img:hover {
-    transform: scale(1.0) scaleX(-1);
+    filter: grayscale(100%);
+    opacity: 0.90;
+    margin-top: -150px;  /* nach oben */
+    margin-right: 35px; /* nach links */
 }
 
 /* ------ FEATURES SECTION ------ */
@@ -555,38 +574,87 @@ spline-viewer{
 
 .features-grid-container {
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
     row-gap: 4rem;
     column-gap: 10rem;
     justify-items: left;
     align-items: top;
-    margin: 30px 240px 30px;
+    margin: 30px 200px 30px;
 }
 
 .feature-text {
-    max-width: 600px;
     width: 100%;
+    position: relative;
+}
+
+.feature-text::before {
+    content: "";
+    display: block;
+    margin: 0 auto 2rem; 
+    border-bottom: 2px dotted black;
 }
 
 .feature-headings {
     margin-bottom: 5rem;
 }
 
-/* .feature-img {
-    max-width: 40rem;
-    width: 100%;
+/* Container für alle Boxen */
+.skills-container {
+    display: flex;
+    gap: 1.5rem;        
+    flex-wrap: wrap;    
+    margin-top: 1rem;
+}
+
+/* Jede Box */
+.skill-box-Tech {
+    height: 400px;
+    flex: 1;
     border: 2px solid black;
-    transition: transform 0.8s ease;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(111, 147, 201, 0.20); /* Alpha 57/FF ≈ 0.34 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-img:hover {
-    transform: scale(1.15) scaleX(-1);
+.skill-box-Art {
+    height: 400px;
+    flex: 1;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(111, 147, 201, 0.20); /* Alpha 57/FF ≈ 0.34 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-img-swap-order {
-    grid-row: 2;
-    grid-column: 2;
-} */
+.skill-box-Rebel {
+    height: 400px;
+    flex: 1;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(111, 147, 201, 0.20); /* Alpha 57/FF ≈ 0.34 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-Effekt */
+.skill-box-Tech:hover,
+.skill-box-Art:hover,
+.skill-box-Rebel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Titel in der Box */
+.skill-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Beschreibung */
+.skill-desc {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
 
 /* ------ CTA SECTION ------
 

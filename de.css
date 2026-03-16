@@ -536,7 +536,7 @@ spline-viewer {
     height: 100%;
     z-index: 0;           /* alles andere überlagert */
     pointer-events: none; /* Spline klickbar deaktivieren, damit Buttons funktionieren */
-    opacity: 0.15;        /* optional, damit Content besser lesbar ist */
+    opacity: 0.08;        /* optional, damit Content besser lesbar ist */
 }
 
 /* Hero/Feature Content über Spline */

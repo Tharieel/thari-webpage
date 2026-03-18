@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../de.css">
-    <!-- <link rel="stylesheet" href="contact.css"> -->
+    <link rel="stylesheet" href="projects.css">
     <title>THARI - Projekte</title>
 </head>
 <body>
@@ -40,18 +40,58 @@
 
         <!-- FEATURE SECTION -->
         <main>
-            <section class="hero-section">
+            <section class="project-section">
 
-            <div class="hero-bg">
-                <div class="hero-waves">
-                <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-                    <path d="M0,160 C320,240 480,80 720,160 C960,240 1120,80 1440,160 L1440,320 L0,320 Z"></path>
-                </svg>
-            </div>
+                <div class="project-grid-container">
+                    <div class="project-text">
+                        <h4>TECH | </h4>
+                        <h5 class="project-heading">Data Science</h5>
 
-                <div class="hero-content">
-                    <!-- <img src="../data-science-projects/seabirds/seabird_map.png" alt="Seabird Observations" width="500px"> -->
-                    <iframe src="plots/seabird_map_interactive.html" width="800px" height="650px"></iframe>
+                        <!-- ROW 1 -->
+                        <div class="plot-container">
+                            <!-- Obere Zeile: Plot + Vogelarten -->
+                            <div class="plot-top">
+                                <iframe src="plots/seabird_combined_interactive.html" class="plot-iframe"></iframe>
+
+                                <div class="plot-bird-list">
+                                    <ul>
+                                        <p>Vogelarten</p>
+                                        <li>Larus novaehollandiae – Silbermöwe</li>
+                                        <li>Sterna bergii – Weißbrustseeschwalbe</li>
+                                        <li>Egretta sacra – Rotschnabelreiher</li>
+                                        <li>Sterna sumatrana – Sumatra-Seeschwalbe</li>
+                                        <li>Sula leucogaster – Braunschwingen-Tölpel</li>
+                                        <li>Anous minutus – Schwarzfußtölpel</li>
+                                        <li>Onychoprion anaethetus – Graukopftölpel</li>
+                                        <li>Anous stolidus – Noddi-Tölpel</li>
+                                        <li>Fregata ariel – Fregattvogel</li>
+                                        <li>Sterna bengalensis – Bengalseeschwalbe</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Unterer Text -->
+                            <div class="plot-description">
+                                <p>
+                                    Interaktive Visualisierung von Seabird-Beobachtungen basierend auf geographischen Koordinaten und Umweltfaktoren. <br><br>
+                                    Ziel ist es, Muster in der Verteilung der Arten sichtbar zu machen.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- ROW 2
+                        <div class="plot-container">
+                            <iframe src="plots/seabird_map_cluster_interactive.html" width="900px" height="600px"></iframe>
+                            <div class="plot-description">
+                                <p>
+                                    Anwendung von DBSCAN zur Identifikation von Hotspots.
+                                </p>
+                                <p>
+                                    Cluster zeigen Regionen mit erhöhter Aktivität und ermöglichen eine datengetriebene Analyse von Lebensräumen.
+                                </p>
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
 
             </section>

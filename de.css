@@ -659,10 +659,8 @@ spline-viewer {
 /* ------ CTA SECTION ------
 
 .cta-section {
-    margin-bottom: 10rem;
-    margin-top: 10rem;
-    display: flex;
-    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 2rem;
 }
 
 .cta-card {
@@ -675,7 +673,7 @@ spline-viewer {
 .cta-heading {
     margin-bottom: 3rem;
     color: var(--black);
-} */
+} 
 
 /* ------ FOOTER ------ */
 

@@ -76,23 +76,12 @@ Black: #000000 (Black)
     --letter-spacing-tight: -2px;
 
     /* FONT FAMILY */
-    --font-family: 'Poppins', sans-serif;
+    --font-family: 'Monospace', monospace;
 
     /* COLORS */
-    --primary-base: #339af0;
-    --primary-tint: #d0ebff;
-    --primary-shade: #1c7ed6;
-    --secondary-base: #9775fa;
-    --secondary-tint: #e5dbff;
-    --secondary-shade: #7048e8;
-    --tertiary-base: #ff922b;
-    --tertiary-tint: #ffe8cc;
-    --tertiary-shade: #f76707;
-    --grey-base: #495057;
-    --grey-tint: #f1f3f5;
-    --grey-shade: #212529;
     --white: #ffffff;
-    --black: #000000; 
+    --black: #000000;
+    --blue: rgb(15,29,98);
     
     /* MISCELLANEOUS */
     --nav-height: 10rem; /* Update the value in the flexbox topic */
@@ -109,6 +98,7 @@ html, body {
     font-weight: var(--font-weight-normal);
     line-height: var(--line-height-normal);
     color: var(--grey-base);
+    background-color: var(--blue);
     font-size: 62.5%;
     display: flex;
     flex-direction: column;
@@ -176,7 +166,7 @@ a:hover {
 }
 
 a:link, a:visited, a:hover, a:active {
-    color: var(--grey-base);
+    color: var(--white);
 }
 
 button {
@@ -221,47 +211,61 @@ ul {
 
 .btn-primary:link, .btn-primary:visited {
     color: var(--white);
-    background-color: var(--black);
-    border: 2px dotted var(--black);
+    background-color: transparent;
+    border: 2px dotted var(--white);
     transition: 0.5s;
 }
 
 .btn-primary:hover, .btn-primary:active {
     color: var(--white);
-    background-color: var(--black);
-    border: 2px dotted var(--black);
+    background-color: transparent;
+    border: 2px dotted var(--white);
     transform: scale(1.05, 1.05);
     box-shadow: 0px 3px 6px var(--grey-base);
 }
 
 .btn-primary-outline:link, .btn-primary-outline:visited {
-    color: var(--black);
-    background-color: var(--white);
-    border: 2px dotted var(--black);
+    color: var(--white);
+    background-color: transparent;
+    border: 2px dotted var(--white);
     transition: 0.5s;
 }
 
 .btn-primary-outline:hover, .btn-primary-outline:active {
-    color: var(--black);
-    background-color: var(--white);
-    border: 2px dotted var(--black);
+    color: var(white);
+    background-color: transparent;
+    border: 2px dotted var(white);
     transform: scale(1.05, 1.05);
     box-shadow: 0px 3px 6px var(--grey-base);
 }
 
+.btn-secondary {
+    display: flex;              /* Flexbox für Zentrierung */
+    justify-content: center;    /* horizontal zentrieren */
+    align-items: center;        /* vertikal zentrieren */
+    box-sizing: border-box;     /* padding + border korrekt berechnen */
+    padding: 0.5rem 1rem;       /* Innenabstand */
+    text-decoration: none;      /* Unterstrich entfernen */
+    background-color: transparent;
+    border: 2px dotted var(--white); /* gepunkteter Rahmen */
+    color: var(--white);        /* Textfarbe */
+    transition: 0.5s;
+}
+
 .btn-secondary:link, .btn-secondary:visited {
-    color: var(--white);
-    background-color: var(--black);
-    border: 2px dotted var(--black);
+    background-color: transparent;
+    border: 2px dotted var(white);
+    border-color: white;
     transition: 0.5s;
 }
 
 .btn-secondary:hover, .btn-secondary:active {
-    color: var(--white);
-    background-color: var(--black);
-    border: 2px dotted var(--black);
+    background-color: transparent;
+    border: 2px dotted var(white);
     transform: scale(1.05, 1.05);
-    box-shadow: 0px 3px 6px var(--grey-base);
+    /* box-shadow: 0px 3px 6px var(--grey-base); */
+    transform: scale(1.05);
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.3); /* harte Schatten */
 }
 
 .highlight {
@@ -327,20 +331,21 @@ ul {
 
 .site-header {
     width: 100%;
-    background-color: #6f93c957; /* gleicher Hintergrund wie Nav */
-    border-bottom: 2px solid #000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: rgb(15,29,98,0.30); /* gleicher Hintergrund wie Nav */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-bottom: 1px solid var(--white);
     margin-top: 0;
     position: sticky;
     backdrop-filter: blur(10px); /* hier passiert die Unschärfe */
     -webkit-backdrop-filter: blur(10px); /* Safari */
     top: 0;
     z-index: 1000;
+    position: fixed;
 }
 
 /* gleicher Abstand wie Navigation */
 .header-inner {
-    max-width: 1350px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 5px;
 }
@@ -351,14 +356,13 @@ ul {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    padding: 0px 5px;
 }
 
 /* Logo */
 .logo-container a {
     font-size: 26px;
     text-decoration: none;
-    color: #000;
+    color: white;
 }
 
 /* NAVIGATION direkt rechts vom Logo, nimmt nur den nötigen Platz */
@@ -403,7 +407,7 @@ ul {
 }
 
 .nav-icons {
-    width: 24px;
+    width: 28px;
     height: 24px;
 }
 
@@ -439,130 +443,78 @@ ul {
 
 /* ------ HERO SECTION ------ */
 
-/* HERO SECTION BOX */
+/* HERO SECTION */
 .hero-section {
-    margin-top: 50px;
-    margin-bottom: 2rem;
-}
-
-/* Wellen Hintergrund */
-.hero-waves {
-    position: absolute;
-    bottom: 0;      /* an den unteren Rand der Box */
-    left: 0;
-    width: 100%;
-    height: 300px;  /* Höhe der Wellen */
-    z-index: 2;
-    opacity: 0.15;
-}
-
-.hero-waves svg {
-    width: 100%;
-    height: 100%;
-}
-
-.hero-waves path {
-    fill: #4a6fa5; /* Wellenfarbe */
-}
-
-/* Box mit Hintergrund */
-.hero-bg {
+    max-width: 1300px;
+    margin: 0px auto;
     display: flex;
-    flex-direction: row; /* Text links, Bild rechts */
-    justify-content: space-between;
-    max-width: 1350px;
-    margin: 0 auto;
-    padding: 0 90px;          /* nur horizontales Padding */
-    height: 730px;            /* feste Höhe der Box */
-    background-color: #6f93c957;
-    border: 2px solid #000;
-    border-radius: 12px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+    flex-direction: column;
 }
 
-/* Textblock */
-.hero-content {
-    position: absolute;     /* unabhängig von Box-Flex */
-    top: 60px;              /* Abstand vom oberen Rand der Box */
-    left: 120px;             /* Abstand vom linken Rand */
-    max-width: 600px;
-    text-align: left;
-    z-index: 2;
+/* Logo oben zentriert */
+.hero-logo-box {
+    font-family: monospace;
+    text-align: center;
+    margin: 180px;
 }
 
-/* Heading */
-.hero-heading {
-    margin-bottom: 1rem;
+.hero-logo-box h1 {
+    font-size: 8rem;
+    color: var(--white);
+}
+
+.hero-logo-box p {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+/* Container für Heading + Paragraph + Bild nebeneinander */
+.hero-head-paragraph-img {
+    display: flex;
+    justify-content: space-between; /* Text links, Bild rechts */
+    align-items: flex-start; /* oben ausrichten */
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+/* Linker Textblock: h2 über Paragraph */
+.hero-head-paragraph {
+    font-family: monospace;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column; /* h2 über Paragraph */
+    gap: 1rem; /* Abstand zwischen h2 und Paragraph */
+}
+
+/* Überschrift im Textblock */
+.hero-head-paragraph h2 {
+    font-size: 5rem;
+    color: var(--white);
+    margin: 0;
 }
 
 /* Paragraph */
-.hero-paragraph {
-    margin-bottom: clamp(3rem, 3rem, 5rem);
+.hero-head-paragraph p {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--white);
 }
 
-/* Buttons */
+/* Bild rechts */
+.hero-img {
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Buttons unten zentriert */
 .hero-btn-container {
     display: flex;
-    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
     list-style: none;
     padding: 0;
-    margin: 0;
-    align-items: center;
-}
-
-spline-viewer {
-    transform: translate(350px, 20px);
-    z-index: 2;
-}
-
-.spline-bg-1 {
-    position: absolute;   /* hinter den Content */
-    top: 0px;
-    /* left: -500px; */
-    width: 100%;
-    height: 100%;
-    z-index: 0;           /* alles andere überlagert */
-    pointer-events: none; /*Spline klickbar deaktivieren, damit Buttons funktionieren */
-    opacity: 0.10;        /* optional, damit Content besser lesbar ist */
-}
-
-.spline-bg-2 {
-    position: absolute;   /* hinter den Content */
-    top: 1300px;
-    left: -500px;
-    width: 100%;
-    height: 100%;
-    z-index: 0;           /* alles andere überlagert */
-    pointer-events: none; /*Spline klickbar deaktivieren, damit Buttons funktionieren */
-    opacity: 0.08;        /* optional, damit Content besser lesbar ist */
-}
-
-/* Hero/Feature Content über Spline */
-.hero-bg, .features-grid-container {
-    position: relative;
-    z-index: 1;
-}
-
-.Startseite-img-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-}
-
-.Startseite-img {
-    max-width: 400px;
-    height: auto;
-    object-fit: contain;
-    border: 2px solid black;
-    border-radius: 10px;
-    filter: grayscale(100%);
-    opacity: 0.90;
-    margin-top: -150px;  /* nach oben */
-    margin-right: 35px; /* nach links */
+    margin-top: 15rem;
 }
 
 /* ------ FEATURES SECTION ------ */
@@ -578,19 +530,13 @@ spline-viewer {
     column-gap: 10rem;
     justify-items: left;
     align-items: top;
-    margin: 30px 200px 30px;
+    margin: 100px 200px 100px;
 }
 
 .feature-text {
     width: 100%;
+    color: var(--white);
     position: relative;
-}
-
-.feature-text::before {
-    content: "";
-    display: block;
-    margin: 0 auto 2rem; 
-    border-bottom: 2px dotted black;
 }
 
 .feature-headings {
@@ -609,17 +555,17 @@ spline-viewer {
 .skill-box-Tech {
     height: 400px;
     flex: 1;
-    border: 2px solid black;
+    border: 2px solid var(--white);
     border-radius: 10px;
     padding: 1rem;
-    background-color: rgba(111, 147, 201, 0.20); /* Alpha 57/FF ≈ 0.34 */
+    background-color: rgba(111, 147, 201, 0.086); /* Alpha 57/FF ≈ 0.34 */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-box-Art {
     height: 400px;
     flex: 1;
-    border: 2px solid black;
+    border: 2px solid var(--white);
     border-radius: 10px;
     padding: 1rem;
     background-color: rgba(111, 147, 201, 0.20); /* Alpha 57/FF ≈ 0.34 */
@@ -679,9 +625,8 @@ spline-viewer {
 
 .footer {
     width: 100%;
-    background-color: rgba(240, 240, 240, 0.95); /* gleicher Hintergrund wie Nav */
-    border-top: 2px solid #000;
-    background-color: #4a6ea55d;
+    background-color: var(--blue);
+    border-top: 1px solid var(--white);
     margin-top: 0;
 }
 
@@ -708,7 +653,7 @@ spline-viewer {
 .footer-rechts-nav-container {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.1rem;
     list-style: none;
     padding: 0;
     margin-top: -25px;
@@ -720,12 +665,13 @@ spline-viewer {
 
 .small-text-footer {
     text-align: center;
+    color: var(--white);
     margin-top: 2rem;
     margin-bottom: 0rem;
 }
 
 .heart-icon {
-    color: var(--black);
+    color: var(--white);
 }
 
 /* ------ TOOLTIP ------ */
@@ -740,8 +686,8 @@ spline-viewer {
     top: 58px;
     left: -250%;
     transform: translateX(-50%);
-    background-color: black;
-    color: white;
+    background-color: var(--white);
+    color: var(--black);
     padding: 0.3rem 0.6rem;
     font-size: 1.3rem;
     white-space: nowrap;

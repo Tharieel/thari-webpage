@@ -512,11 +512,10 @@ ul {
     gap: 5rem;
     list-style: none;
     padding: 0;
-    margin-top: 15rem;
+    margin: 5rem;
 }
 
 /* ------ FEATURES SECTION ------ */
-
 .features-section {
     max-width: 800px;
     display: flex;
@@ -529,7 +528,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--white);
+    border: 1px solid var(--white);
     border-radius: 12px;
     color: var(--white);
     margin: 5rem auto;
@@ -550,27 +549,44 @@ ul {
     box-shadow: 0px 3px 6px var(--grey-base);
 }
 
-/* ------ CTA SECTION ------
-
+/* ------ CTA SECTION ------ */
 .cta-section {
-    margin-top: 50px;
-    margin-bottom: 2rem;
-}
-
-.cta-card {
-    text-align: center;
-    border: 1px dashed #000000;
+    width: 100%;
     max-width: 1000px;
-    padding: 10rem 20rem;
+    margin: 0 auto;
+    padding: 3rem 2rem 10rem;
 }
 
-.cta-heading {
-    margin-bottom: 3rem;
-    color: var(--black);
-} 
+.cta-box {
+    border: 1px solid var(--white);
+    border-radius: 12px;
+    text-align: center;
+    align-items: center;
+    color: var(--white);
+}
+
+.cta-box h2 {
+    font-size: 4rem;
+    padding: 5rem 0 2rem;
+}
+
+.cta-box p {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    padding: 0 5rem 0;
+}
+
+.cta-box a {
+    margin: 3rem 0 5rem;
+    padding: 1rem 2rem;
+    font-size: var(--text-base);
+    display: inline-block;
+    transition: transform 0.8s ease;
+    border: 2px dotted var(--white);
+    color: var(--white);
+}
 
 /* ------ FOOTER ------ */
-
 .footer {
     width: 100%;
     background-color: var(--blue);
@@ -663,8 +679,8 @@ ul {
     color: var(--white);
 }
 
-/* ------ TOOLTIP ------ */
 
+/* ------ TOOLTIP ------ */
 .tooltip {
     position: relative;
     display: inline-block;

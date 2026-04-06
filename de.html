@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="de.css">
+    <link rel="stylesheet" href="intro.css">
     <title>THARI - Homepage</title>
 </head>
 <body>
@@ -144,8 +145,11 @@
                     <ul class="footer-email">
                         <p>Schreib mir eine E-Mail:</p>
                         <li><a href="mailto:thari.business@protonmail.com">thari.business@protonmail.com</a></li>
-                        <p>Oder gebe deine E-Mail ein und ich schreibe dir:</p>
-                        <li><input type="email" placeholder="E-Mail Adresse eingeben"><button class="btn btn-secondary">Senden</button></li>
+                        <p>Oder gebe deine E-Mail Adresse ein und ich schreibe dir:</p>
+                        <form class="email-box">
+                            <input type="email" placeholder="E-Mail Adresse eingeben">
+                            <button type="submit">Senden</button></li>
+                        </form>
                     </ul>
                 </div>
             </div>
@@ -155,5 +159,11 @@
             </div> 
         </footer>
     </div>
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <script src="intro.js"></script>
+
 </body>
 </html>

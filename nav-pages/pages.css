@@ -1,0 +1,17 @@
+.section {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.section-inner {
+    max-width: 1300px;
+    margin: 10rem auto;
+}
+
+.section h1 {
+    font-family: monospace;
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 0;
+    padding: 0;
+}

@@ -8,30 +8,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../de.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../intro.css">
     <title>THARI - Kontakt</title>
 </head>
 <body>
     <div class="container">
+        
         <header class="site-header">
             <div class="header-inner">
                 <div class="header-bg">
                     <div class="logo-container">
-                        <a href="../de.html"><b>T</b>H<b>A</b>RI</a>
+                        <a href="../de.html">THARI.</a>
                     </div>
                     <nav class="navbar">
                         <ul class="nav-btn-container">
-                            <li><a class="nav-btn" href="../nav-pages/contact.html">Kontakt</a></li>
-                            <li><a class="nav-btn" href="../nav-pages/services.html">Projekte</a></li>
-                            <li><a class="nav-btn" href="../nav-pages/blog.html">Blog</a></li>
+                            <li><a class="nav-btn" href="about.html">Info</a></li>
+                            <li><a class="nav-btn" href="contact.html">Kontakt</a></li>
+                            <li><a class="nav-btn" href="projects.html">Projekte</a></li>
+                            <li><a class="nav-btn" href="blog.html">Blog</a></li>
                         </ul>
                     </nav>
                     <div class="header-right">
                         <ul class="nav-login-register-container">
-                            <li><a class="btn btn-primary" href="../login-register/login.html">Anmelden</a></li>
+                            <li><a class="btn btn-secondary" href="login-register/login.html">Anmelden</a></li>
                         </ul>
                         <ul class="nav-language-lightdark-container">
-                            <li class="tooltip"><img class="nav-icons" src="../images/svg/globe-outline.svg" alt="World Logo"><span class="tooltip-text">de | en Übersetzung folgt</span></li>
-                            <li class="tooltip"><img class="nav-icons" src="../images/svg/contrast-outline.svg" alt="Darklight Logo"><span class="tooltip-text">light | dark Modus folgt</span></li>
+                            <li class="tooltip"><img class="nav-icons" src="../Figma/Globus_Sprache.png" alt="World Logo"><span class="tooltip-text">de | en Übersetzung folgt</span></li>
+                            <li class="tooltip"><img class="nav-icons" src="../Figma/Lampe_hell_dunkel.png" alt="Darklight Logo"><span class="tooltip-text">light | dark Modus folgt</span></li>
                         </ul>
                     </div>
                 </div>
@@ -71,26 +74,59 @@
         <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-inner">
-            <div class="footer-thari">
-                <a href="../de.html">THARI | Portfolio</a>
-            </div>
-            <div class="footer-row">
-                <ul class="social-icons-container">
-                    <li><a href="https://www.instagram.com/"><img class="social-icons" src="../images/svg/logo-instagram.svg" alt="Instagram"></a></li>
-                    <li><a href="https://www.linkedin.com/"><img class="social-icons" src="../images/svg/logo-linkedin.svg" alt="LinkedIn"></a></li>
-                    <li><a href="https://www.youtube.com/"><img class="social-icons" src="../images/svg/logo-youtube.svg" alt="YouTube"></a></li>
-                    <li><a href="https://www.github.com/"><img class="social-icons" src="../images/svg/logo-github.svg" alt="GitHub"></a></li>
-                </ul>
+                <div class="footer-logo">
+                    <p class="footer-logo-thari">THARI.</p>
+                    <p class="footer-logo-text">Tech. Help. Art. Results. Impact.</p>
+                </div>
+                <div class="footer-pages">
+                    <ul class="footer-home">
+                        <li><a href="de.html">Home</a></li>
+                
+                        <ul class="footer-projekte-blog">
+                            <li><a href="nav-pages/projekte.html">Projekte</a></li>
+                            <li><a href="nav-pages/blog.html">Blog</a></li>
+                        </ul>
+                    </ul>
 
-                <ul class="footer-rechts-nav-container">
-                    <li><a href="../footer-pages/impressum.html">Impressum</a></li>
-                    <li><a href="../footer-pages/datenschutz.html">Datenschutz</a></li>
-                </ul>
+                    <ul class="footer-kontakt">
+                        <li><a href="nav-pages/kontakt.html">Kontakt</a></li>
+
+                        <ul class="footer-socials">
+                            <li><a href="www.linkedin.com">LinkedIn</a></li>
+                            <li><a href="www.instagram.com">Instagram</a></li>
+                            <li><a href="www.github.com">GitHub</a></li>
+                        </ul>
+                    </ul>
+
+                    <ul class="footer-impressum-datenschutz">
+                        <li><a href="footer-pages/impressum.html">Impressum</a></li>
+                        <li><a href="footer-pages/datenschutz.html">Datenschutz</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-email">
+                    <p>Schreib mir eine E-Mail:</p>
+                    <li><a href="mailto:thari.business@protonmail.com">thari.business@protonmail.com</a></li>
+                    <p>Oder gebe deine E-Mail Adresse ein und <br> ich schreibe dir:</p>
+                    <form class="email-box">
+                        <input type="email" placeholder="E-Mail Adresse eingeben">
+                        <button type="submit">Senden</button></li>
+                    </form>
+                </div>
+            
             </div>
+
             <div class="small-text-footer">
-                <p class="small-text">Made with <span class="heart-icon">♥︎</span> in Düsseldorf</p>
-            </div>
+                <p>Made with <span class="heart-icon">♥︎</span> in Düsseldorf</p>
+            </div> 
         </footer>
     </div>
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <script src="../intro.js"></script>
+
 </body>
 </html>

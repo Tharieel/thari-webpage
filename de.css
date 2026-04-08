@@ -450,7 +450,6 @@ ul {
 /* HERO SECTION */
 .hero-section {
     width: 100%;
-    margin: 0px auto;
     display: flex;
     flex-direction: column;
 }
@@ -475,10 +474,11 @@ ul {
 /* Container für Heading + Paragraph + Bild nebeneinander */
 .hero-head-paragraph-img {
     max-width: 1350px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Text links, Bild rechts */
-    align-items: flex-start; /* oben ausrichten */
-    gap: 5rem;
+    justify-content: center;
+    align-items: center; /* oben ausrichten */
+    gap: 20rem;
     padding: 3rem 2rem;
 }
 
@@ -487,7 +487,6 @@ ul {
     font-family: monospace;
     display: flex;
     flex-direction: column; /* h2 über Paragraph */
-    gap: 0;
 }
 
 .hero-head-paragraph h3 {
@@ -497,9 +496,10 @@ ul {
 
 /* Überschrift im Textblock */
 .hero-head-paragraph h2 {
-    font-size: 5.5wrem;
+    font-size: 8rem;
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 0.9;
+    letter-spacing: 5px;
     color: var(--white);
 }
 

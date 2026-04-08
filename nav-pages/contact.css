@@ -3,16 +3,16 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 50px 20px;
+    margin: 10rem;
 }
 
 /* Container mit Scroll */
 .login-form-container {
     max-height: 80vh;          /* max. Höhe der Box */          /* Scrollbar bei Überlauf */
     padding: 20px;
-    border: 2px solid #000;    /* schwarzer Rand */
+    border: 2px solid var(--white);    /* schwarzer Rand */
     border-radius: 12px;       /* abgerundete Ecken */
-    background-color: rgba(111, 147, 201, 0.35); /* halbtransparent wie Nav */
+    background-color: transparent; /* halbtransparent wie Nav */
 }
 
 /* Dein bestehendes Formular-Design bleibt */
@@ -30,28 +30,36 @@
 .login-header {
     text-align: center;
     margin-bottom: 20px;
+    color: white;
 }
 
 /* Inputs & Textarea */
 .login-form input[type=text] {
     font-family: var(--font-family);
+    font-size: 1.4rem;
     width: 100%;
     padding: 12px 20px;
     margin: 10px 0;
-    border: 2px solid #000;
+    border: 2px solid var(--white);
     box-sizing: border-box;
 }
 
 .login-form textarea {
     font-family: var(--font-family);
+    font-size: 1.4rem;
     width: 100%;
     padding: 12px 20px;
     margin: 10px 0;
-    border: 2px solid #000;
+    border: 2px solid var(--white);
     box-sizing: border-box;
     resize: none;
     height: 150px;
     overflow-y: auto;
+}
+
+.checkbox-text {
+    color: white;
+    font-size: 1.2rem;
 }
 
 /* Buttons */
@@ -63,7 +71,7 @@
 }
 
 .login-form button, .login-register-form-buttons a.btn {
-    background-color: black;
+    background-color: transparent;
     color: white;
     font-family: var(--font-family);
     padding: 14px 20px;
@@ -73,13 +81,15 @@
 /* Checkbox + Text wie Aufzählung */
 .login-form .small-text {
     display: flex;
-    align-items: flex-start;  /* Checkbox oben, Text oben */
+    align-items: flex-start;
+    font-size: 1.5rem;
+    color: white;
     margin: 2px;             /* Abstand zwischen Checkbox und Text */
 }
 
 .login-form .small-text input[type=checkbox] {
     margin: 3px 2px;       /* optional: kleine vertikale Anpassung */
-    border: 2px solid #000;
+    border: 2px solid var(--white);
 }
 
 /* Rest-Zeile leicht eingerückt */
@@ -90,7 +100,7 @@
 
 /* Linie */
 .short-line {
-    border: 1px dashed black;
+    border: 1px dashed var(--white);
     margin: 10px 0;
     opacity: 0.6;
 }
